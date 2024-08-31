@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicorn City 2000</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        body {
+            font-family: 'VT323', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #2b0043;
+            color: #f8c8ff;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #3d0066;
+            border: 4px solid #8a2be2;
+            box-shadow: 0 0 0 4px #2b0043, 0 0 0 8px #8a2be2;
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: repeating-linear-gradient(
+                45deg,
+                #3d0066,
+                #3d0066 10px,
+                #4b007f 10px,
+                #4b007f 20px
+            );
+            z-index: -1;
+            transform: skew(-5deg, -5deg);
+        }
+        header {
+            background-color: #8a2be2;
+            color: #f8c8ff;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 20px;
+            transform: skew(-5deg);
+            border: 2px solid #f8c8ff;
+        }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            text-shadow: 3px 3px 0px #2b0043;
+        }
+        nav {
+            background-color: #6a0dad;
+            padding: 0.5rem;
+            margin-bottom: 20px;
+            border: 2px solid #f8c8ff;
+            transform: skew(5deg);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li a {
+            color: #f8c8ff;
+            text-decoration: none;
+            font-size: 18px;
+            text-shadow: 2px 2px 0px #2b0043;
+        }
+        .product {
+            border: 2px solid #8a2be2;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #4b007f;
+            transform: rotate(-2deg) skew(-2deg);
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: rotate(0deg) skew(0deg) scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #f8c8ff;
+        }
+        .product h3 {
+            font-size: 24px;
+            color: #ff9cff;
+            margin-top: 10px;
+            text-shadow: 2px 2px 0px #2b0043;
+        }
+        .product p {
+            font-size: 18px;
+        }
+        button {
+            background-color: #ff4dff;
+            color: #2b0043;
+            border: none;
+            padding: 10px 20px;
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+            cursor: pointer;
+            transform: skew(-5deg);
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff9cff;
+            transform: skew(0deg) scale(1.1);
+        }
+        footer {
+            background-color: #8a2be2;
+            color: #f8c8ff;
+            text-align: center;
+            padding: 1rem;
+            font-size: 16px;
+            border-top: 2px solid #f8c8ff;
+            transform: skew(-5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦄 Unicorn City 2000 🦄</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">INVENTORY</a></li>
+                <li><a href="#">QUESTS</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            <h2>🌈 Magical Items 🌈</h2>
+            <div class="product">
+                <img src="/api/placeholder/320/240" alt="Unicorn Potion">
+                <h3>Unicorn Potion</h3>
+                <p>Grants the power of rainbows!</p>
+                <p>PRICE: 500 STARDUST</p>
+                <button>ADD TO INVENTORY</button>
+            </div>
+            <div class="product">
+                <img src="/api/placeholder/320/240" alt="Glitter Armor">
+                <h3>Glitter Armor</h3>
+                <p>+10 Defense, +5 Fabulousness</p>
+                <p>PRICE: 750 STARDUST</p>
+                <button>ADD TO INVENTORY</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Unicorn City 2000. All magical rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
